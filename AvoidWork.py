@@ -6,11 +6,12 @@ import random
 def gen_points():
     x = random.randint(300, 1000)
     y = random.randint(300, 900)
-    return x, y
+    z = random.randint(10, 120)
+    return x, y, z
 
 
 if __name__ == '__main__':
     while True:
-        time.sleep(300)
-        x, y = gen_points()
+        x, y, z = gen_points()
+        time.sleep(z)
         pyautogui.moveTo(x, y)
